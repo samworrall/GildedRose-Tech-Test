@@ -13,11 +13,19 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(6)
     });
 
-    it("Should increase the quality of Backstage passes by 1", function() {
-      const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5)]);
+    it("Should no longer see its value depreciate after reaching 0", function() {
+      const gildedRose = new Shop([ new Item("sword", 5, 1)]);
       gildedRose.updateQuality()
-      expect(gildedRose.items[0].quality).toEqual(6)
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(0)
     });
-  });
 
+      describe("SellIn value is greater than 10", function() {
+        it("Should increase the quality of Backstage passes by 1", function() {
+          const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5)]);
+          gildedRose.updateQuality()
+          expect(gildedRose.items[0].quality).toEqual(6)
+        });
+      });
+  });
 });
