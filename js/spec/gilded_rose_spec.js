@@ -33,6 +33,12 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(1)
     });
 
+    it("Should not depreciate in quality", function() {
+      const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 5, 5)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(5)
+    });
+
       describe("SellIn value is greater than 10", function() {
         it("Should increase the quality of Backstage passes by 1", function() {
           const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5)]);
