@@ -64,6 +64,12 @@ describe("Gilded Rose", function() {
             gildedRose.updateQuality()
             expect(gildedRose.items[0].quality).toEqual(8)
           });
+
+          it("Should keep quality of Backstage passes 50", function() {
+            const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 4, 49)]);
+            gildedRose.updateQuality()
+            expect(gildedRose.items[0].quality).toEqual(50)
+          });
         });
     });
 
