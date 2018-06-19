@@ -20,6 +20,12 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(0)
     });
 
+    it("Should cap quality at 50", function() {
+      const gildedRose = new Shop([ new Item("Aged Brie", 5, 50)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(50)
+    })
+
     it("Should depreciate in value twice as fast", function() {
       const gildedRose = new Shop([ new Item("sword", 0, 5)]);
       gildedRose.updateQuality()
