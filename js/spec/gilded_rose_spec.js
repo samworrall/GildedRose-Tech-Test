@@ -34,5 +34,13 @@ describe("Gilded Rose", function() {
           expect(gildedRose.items[0].quality).toEqual(6)
         });
       });
+
+      describe("SellIn value is less than 10 and greater than 5", function() {
+        it("Should increase the quality of Backstage passes by 2", function() {
+          const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 9, 5)]);
+          gildedRose.updateQuality()
+          expect(gildedRose.items[0].quality).toEqual(7)
+        })
+      })
   });
 });
