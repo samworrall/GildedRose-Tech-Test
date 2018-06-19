@@ -7,18 +7,17 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(4)
     });
 
-    it("Should increase the quality of Aged Brie", function() {
+    it("Should increase the quality of Aged Brie by 1", function() {
       const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
       gildedRose.updateQuality()
       expect(gildedRose.items[0].quality).toEqual(6)
-    })
+    });
 
-  })
-
-  it("should foo", function() {
-    const gildedRose = new Shop([ new Item("foo", 0, 0) ]);
-    const items = gildedRose.updateQuality();
-    expect(items[0].name).toEqual("foo");
+    it("Should increase the quality of Backstage passes by 1", function() {
+      const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(6)
+    });
   });
 
 });
