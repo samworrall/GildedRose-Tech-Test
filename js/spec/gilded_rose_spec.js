@@ -5,6 +5,12 @@ describe("Gilded Rose", function() {
       const gildedRose = new Shop([ new Item("sword", 5, 5)]);
       gildedRose.updateQuality()
       expect(gildedRose.items[0].quality).toEqual(4)
+    });
+
+    it("Should increase the quality of Aged Brie", function() {
+      const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(6)
     })
 
   })
