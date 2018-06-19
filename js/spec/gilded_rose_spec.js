@@ -20,6 +20,13 @@ describe("Gilded Rose", function() {
       expect(gildedRose.items[0].quality).toEqual(0)
     });
 
+    it("Should depreciate in value twice as fast", function() {
+      const gildedRose = new Shop([ new Item("sword", 0, 5)]);
+      gildedRose.updateQuality()
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(1)
+    });
+
       describe("SellIn value is greater than 10", function() {
         it("Should increase the quality of Backstage passes by 1", function() {
           const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5)]);
