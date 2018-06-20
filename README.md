@@ -22,6 +22,7 @@ We have recently signed a supplier of conjured items. This requires an update to
 “Conjured” items degrade in Quality twice as fast as normal items
 Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."
 
+
 ## User Stories
 
 ```
@@ -42,7 +43,33 @@ So that I do not have to monitor the sell-in-date of items myself,
 I would like the software to track their sell-in-date
 ```
 
+```
+As an Innkeeper,
+So that I can cater to more customers,
+I would like to be able to sell conjured items
+```
+
+
+## Organisation
+
+My Trello Board:
+
+<a href="https://trello.com/b/SnZPi9C5/gildedrose"><img src="logos/Trello.png" height="60" width="140"></a>
+
+
 ## Approach
+
+At first, I wanted to dive straight into refactoring the legacy code, however I noticed that it had not been tested at all. The first task then became adding tests for all the legacy functionality. I kept track of what needed testing using my Trello board.
+
+After the tests were in place, I mapped out in a notebook the seemingly complex conditional statement tree which the legacy code had implemented. Through diagramming and planning, I managed to 'conjure' a more refined and efficient method of handling the conditionals.
+
+My aim was to rewrite the legacy code in a way that would not break the tests at all. I managed to achieve this, and also managed to extract methods out of the single updateQuality method to increase readability.
+
+After this refactoring, the implementation of the new conditions for 'conjured items' was quite simple, and required very little extra code.
+
+If I were to improve upon this current iteration, I would like to implement a code coverage tester such as Istanbul so that I can be sure I am testing everything that is necessary. In terms of the source code, I would like to refactor further, perhaps extracting the update classes into a different file so that one file is not responsible for holding all the code.
+
+
 
 ## Instructions
 
