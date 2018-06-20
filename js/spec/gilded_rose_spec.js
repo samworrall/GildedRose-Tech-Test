@@ -58,6 +58,24 @@ describe("Gilded Rose", function() {
       gildedRose.updateStandardItem(gildedRose.items[0]);
       expect(gildedRose.items[0].sellIn).toEqual(4)
     });
+
+    it("Decreases the quality of conjured items by 2", function() {
+      const gildedRose = new Shop([ new Item("Conjured sword", 5, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(3)
+    });
+
+    it("Decreases the quality of conjured items by 4", function() {
+      const gildedRose = new Shop([ new Item("Conjured sword", 0, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(1)
+    });
+
+    it("Decreases the sellIn of conjured items by 1", function() {
+      const gildedRose = new Shop([ new Item("Conjured sword", 5, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
+      expect(gildedRose.items[0].sellIn).toEqual(4)
+    });
   });
 
   describe("#updateQuality", function() {
