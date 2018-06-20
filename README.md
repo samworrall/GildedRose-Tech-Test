@@ -98,15 +98,21 @@ shop = new Shop(
    new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5), new Item("Conjured sword", 10, 10)]
    )
 ```
-Shop {items: Array(5)}
+Shop {items: Array(5)}
+items: Array(5)
+0: Item {name: "sword", sellIn: 4, quality: 4}
+1: Item {name: "Aged Brie", sellIn: 4, quality: 6}
+2: Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
+3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
+4: Item {name: "Conjured sword", sellIn: 9, quality: 8}
 ```
 
 shop.updateQuality();
 ```
 (5) [Item, Item, Item, Item, Item]
-0:Item {name: "sword", sellIn: 4, quality: 4}
-1:Item {name: "Aged Brie", sellIn: 4, quality: 6}
-2:Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
-3:Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
-4:Item {name: "Conjured sword", sellIn: 9, quality: 8}
+0: Item {name: "sword", sellIn: 4, quality: 4}
+1: Item {name: "Aged Brie", sellIn: 4, quality: 6}
+2: Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
+3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
+4: Item {name: "Conjured sword", sellIn: 9, quality: 8}
 ```
