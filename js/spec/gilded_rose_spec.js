@@ -6,6 +6,26 @@ describe("Gilded Rose", function() {
       gildedRose.updateAgedBrie(gildedRose.items[0]);
       expect(gildedRose.items[0].quality).toEqual(6)
     });
+
+    it('Decreases the sellIn by 1', function() {
+      const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
+      gildedRose.updateAgedBrie(gildedRose.items[0]);
+      expect(gildedRose.items[0].sellIn).toEqual(4)
+    });
+  });
+
+  describe("#updateBackstagePass", function() {
+    it('Increases the quality by 1', function() {
+      const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5)]);
+      gildedRose.updateBackstagePass(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(8)
+    });
+
+    it('decreases the sellIn by 1', function() {
+      const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5)]);
+      gildedRose.updateBackstagePass(gildedRose.items[0]);
+      expect(gildedRose.items[0].sellIn).toEqual(4)
+    });
   });
 
   describe("#updateQuality", function() {
