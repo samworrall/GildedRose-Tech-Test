@@ -1,13 +1,13 @@
 describe("Gilded Rose", function() {
 
   describe("#updateAgedBrie", function() {
-    it('Increases the quality by 1', function() {
+    it("Increases the quality by 1", function() {
       const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
       gildedRose.updateAgedBrie(gildedRose.items[0]);
       expect(gildedRose.items[0].quality).toEqual(6)
     });
 
-    it('Decreases the sellIn by 1', function() {
+    it("Decreases the sellIn by 1", function() {
       const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
       gildedRose.updateAgedBrie(gildedRose.items[0]);
       expect(gildedRose.items[0].sellIn).toEqual(4)
@@ -15,27 +15,47 @@ describe("Gilded Rose", function() {
   });
 
   describe("#updateBackstagePass", function() {
-    it('Increases the quality by 3', function() {
+    it("Increases the quality by 3", function() {
       const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5)]);
       gildedRose.updateBackstagePass(gildedRose.items[0]);
       expect(gildedRose.items[0].quality).toEqual(8)
     });
 
-    it('Increases the quality by 2', function() {
+    it("Increases the quality by 2", function() {
       const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 10, 5)]);
       gildedRose.updateBackstagePass(gildedRose.items[0]);
       expect(gildedRose.items[0].quality).toEqual(7)
     });
 
-    it('Increases the quality by 1', function() {
+    it("Increases the quality by 1", function() {
       const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 11, 5)]);
       gildedRose.updateBackstagePass(gildedRose.items[0]);
       expect(gildedRose.items[0].quality).toEqual(6)
     });
 
-    it('Decreases the sellIn by 1', function() {
+    it("Decreases the sellIn by 1", function() {
       const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 5, 5)]);
       gildedRose.updateBackstagePass(gildedRose.items[0]);
+      expect(gildedRose.items[0].sellIn).toEqual(4)
+    });
+  });
+
+  describe("#updateStandardItem", function() {
+    it("Decreases the quality by 1", function() {
+      const gildedRose = new Shop([ new Item("sword", 5, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(4)
+    });
+
+    it("Decreases the quality by 2", function() {
+      const gildedRose = new Shop([ new Item("sword", 0, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(3)
+    });
+
+    it("Decreases the sellIn by 1", function() {
+      const gildedRose = new Shop([ new Item("sword", 5, 5)]);
+      gildedRose.updateStandardItem(gildedRose.items[0]);
       expect(gildedRose.items[0].sellIn).toEqual(4)
     });
   });
