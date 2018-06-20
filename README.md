@@ -1,5 +1,27 @@
 # GildedRose Tech Test
 
+This is the GildedRose tech test for week 10 of Makers Academy. The task is to inherit some fairly ugly legacy code which maps the depreciation of items in an Inn. The legacy code begins with no testing.
+
+The aim is to refactor the existing legacy code to a point where a new 'conjured item' with different behaviour could be added to the system with ease, and without disrupting the rest of the code.
+
+
+## Brief
+
+"Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a prominent city run by a friendly innkeeper named Allison. We also buy and sell only the finest goods. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that we can begin selling a new category of items. First an introduction to our system:
+
+All items have a SellIn value which denotes the number of days we have to sell the item. All items have a Quality value which denotes how valuable the item is. At the end of each day our system lowers both values for every item. Pretty simple, right? Well this is where it gets interesting:
+
+Once the sell by date has passed, Quality degrades twice as fast
+The Quality of an item is never negative
+“Aged Brie” actually increases in Quality the older it gets
+The Quality of an item is never more than 50
+“Sulfuras”, being a legendary item, never has to be sold or decreases in Quality
+“Backstage passes”, like aged brie, increases in Quality as it’s SellIn value approaches; Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after the concert
+We have recently signed a supplier of conjured items. This requires an update to our system:
+
+“Conjured” items degrade in Quality twice as fast as normal items
+Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."
+
 ## User Stories
 
 ```
@@ -23,3 +45,41 @@ I would like the software to track their sell-in-date
 ## Approach
 
 ## Instructions
+
+Clone this repository
+```
+$ git clone git@github.com:samworrall/GildedRose-Tech-Test.git
+```
+
+Check the tests are all passing by running SpecRunner and checking your browser
+```
+$ open SpecRunner.html
+```
+
+Open up the console to play around with the functionality
+```
+command + option + j
+```
+
+## Example
+
+
+shop = new Shop(
+  [new Item("sword", 5, 5),
+   new Item("Aged Brie", 5, 5),
+   new Item("Sulfuras, Hand of Ragnaros", 5, 5),
+   new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5), new Item("Conjured sword", 10, 10)]
+   )
+```
+Shop {items: Array(5)}
+```
+
+shop.updateQuality();
+```
+(5) [Item, Item, Item, Item, Item]
+0:Item {name: "sword", sellIn: 4, quality: 4}
+1:Item {name: "Aged Brie", sellIn: 4, quality: 6}
+2:Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
+3:Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
+4:Item {name: "Conjured sword", sellIn: 9, quality: 8}
+```

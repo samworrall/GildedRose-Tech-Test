@@ -120,6 +120,6 @@ describe("Gilded Rose", function() {
       const gildedRose = new Shop([ new Item("Conjured Sulfuras, Hand of Ragnaros", 10, 10)]);
       gildedRose.updateQuality()
       expect(gildedRose.items[0].quality).toEqual(10)
-    })
+    });
   });
 });
