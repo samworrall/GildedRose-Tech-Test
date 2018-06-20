@@ -1,6 +1,14 @@
 describe("Gilded Rose", function() {
 
-  describe("updateQuality", function() {
+  describe("#updateAgedBrie", function() {
+    it('Increases the quality by 1', function() {
+      const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
+      gildedRose.updateAgedBrie(gildedRose.items[0]);
+      expect(gildedRose.items[0].quality).toEqual(6)
+    });
+  });
+
+  describe("#updateQuality", function() {
 
     describe("Standard Items", function() {
 
