@@ -74,7 +74,6 @@ class Shop {
   // }
 
   updateQuality() {
-    console.log(this)
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].name === 'Aged Brie') {
         this.updateAgedBrie(this.items[i]);
@@ -86,8 +85,13 @@ class Shop {
     }
   }
 
+  updateAgedBrie(item) {
+    if (item.quality < 50) {
+      item.quality += 1
+    }
+  }
+
   updateStandardItem(item) {
-    console.log(item.sellIn)
     if (item.sellIn <= 0 && item.quality > 1) {
       item.quality -= 2
     } else if (item.quality > 0) {

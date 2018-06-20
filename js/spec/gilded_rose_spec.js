@@ -10,11 +10,11 @@ describe("Gilded Rose", function() {
         expect(gildedRose.items[0].quality).toEqual(4)
       });
 
-      // it("Should increase the quality of Aged Brie by 1", function() {
-      //   const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
-      //   gildedRose.updateQuality()
-      //   expect(gildedRose.items[0].quality).toEqual(6)
-      // });
+      it("Should increase the quality of Aged Brie by 1", function() {
+        const gildedRose = new Shop([ new Item("Aged Brie", 5, 5)]);
+        gildedRose.updateQuality()
+        expect(gildedRose.items[0].quality).toEqual(6)
+      });
 
       it("Should no longer see its value depreciate after reaching 0", function() {
         const gildedRose = new Shop([ new Item("sword", 5, 1)]);
@@ -23,11 +23,11 @@ describe("Gilded Rose", function() {
         expect(gildedRose.items[0].quality).toEqual(0)
       });
 
-      // it("Should cap quality at 50", function() {
-      //   const gildedRose = new Shop([ new Item("Aged Brie", 5, 50)]);
-      //   gildedRose.updateQuality()
-      //   expect(gildedRose.items[0].quality).toEqual(50)
-      // })
+      it("Should cap quality at 50", function() {
+        const gildedRose = new Shop([ new Item("Aged Brie", 5, 50)]);
+        gildedRose.updateQuality()
+        expect(gildedRose.items[0].quality).toEqual(50)
+      })
 
       it("Should depreciate in value twice as fast", function() {
         const gildedRose = new Shop([ new Item("sword", 0, 5)]);
