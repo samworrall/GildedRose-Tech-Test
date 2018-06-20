@@ -100,12 +100,26 @@ describe("Gilded Rose", function() {
       const gildedRose = new Shop([ new Item("sword", 10, 10)]);
       gildedRose.updateQuality()
       expect(gildedRose.items[0].sellIn).toEqual(9)
-    })
+    });
 
     it('Holds its value after an update', function() {
       const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 10)]);
       gildedRose.updateQuality()
       expect(gildedRose.items[0].sellIn).toEqual(10)
+    });
+  });
+
+  describe('Conjured items', function() {
+    it('Should depreciate in value twice as fast', function() {
+      const gildedRose = new Shop([ new Item("Conjured sword", 10, 10)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(8)
+    });
+
+    it('Should remain unchanged', function() {
+      const gildedRose = new Shop([ new Item("Conjured Sulfuras, Hand of Ragnaros", 10, 10)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].quality).toEqual(10)
     })
-  })
+  });
 });
