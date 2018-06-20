@@ -100,11 +100,11 @@ shop = new Shop(
 ```
 Shop {items: Array(5)}
 items: Array(5)
-0: Item {name: "sword", sellIn: 4, quality: 4}
-1: Item {name: "Aged Brie", sellIn: 4, quality: 6}
+0: Item {name: "sword", sellIn: 5, quality: 5}
+1: Item {name: "Aged Brie", sellIn: 5, quality: 5}
 2: Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
-3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
-4: Item {name: "Conjured sword", sellIn: 9, quality: 8}
+3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 5}
+4: Item {name: "Conjured sword", sellIn: 10, quality: 10}
 ```
 
 shop.updateQuality();
