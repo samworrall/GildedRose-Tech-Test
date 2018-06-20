@@ -94,4 +94,18 @@ describe("Gilded Rose", function() {
       });
     });
   });
+
+  describe('SellIn', function() {
+    it('Decreases by 1 after an update', function() {
+      const gildedRose = new Shop([ new Item("sword", 10, 10)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].sellIn).toEqual(9)
+    })
+
+    it('Holds its value after an update', function() {
+      const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 10)]);
+      gildedRose.updateQuality()
+      expect(gildedRose.items[0].sellIn).toEqual(10)
+    })
+  })
 });

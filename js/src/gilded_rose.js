@@ -28,6 +28,7 @@ class Shop {
     if (item.quality < 50) {
       item.quality += 1
     }
+    item.sellIn -= 1
   }
 
   updateBackstagePass(item) {
@@ -42,6 +43,7 @@ class Shop {
         }
       }
     }
+    item.sellIn -= 1
   }
 
   updateStandardItem(item) {
@@ -50,5 +52,6 @@ class Shop {
     } else if (item.quality > 0) {
       item.quality -= 1
     }
+    item.sellIn -= 1
   }
 }
