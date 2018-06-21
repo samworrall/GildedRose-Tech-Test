@@ -15,6 +15,13 @@ describe("Item", function() {
   });
 });
 
+describe("AgedBrie", function() {
+  it("Returns the name of the AgedBrie", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 5)
+    expect(brie.name).toEqual('AgedBrie')
+  });
+});
+
 describe("Gilded Rose", function() {
 
   describe("#updateAgedBrie", function() {
