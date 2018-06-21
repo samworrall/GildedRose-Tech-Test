@@ -4,9 +4,9 @@ class AgedBrie extends Item {
   }
 
   update() {
-    switch(this.quality < 50) {
-      case true:
-        this.quality +=1
+    switch(true) {
+      case(this.quality < 50):
+        this.quality += 1
     }
     this.sellIn -= 1
   }
