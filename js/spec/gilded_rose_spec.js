@@ -153,6 +153,18 @@ describe("LegendaryItem", function() {
     const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
     expect(legendaryitem.quality).toEqual(10)
   });
+
+  it("Keeps its original quality", function() {
+    const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
+    legendaryitem.update();
+    expect(legendaryitem.quality).toEqual(10)
+  });
+
+  it("Keeps its original sellIn", function() {
+    const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
+    legendaryitem.update();
+    expect(legendaryitem.quality).toEqual(10)
+  });
 })
 
 describe("Gilded Rose", function() {
