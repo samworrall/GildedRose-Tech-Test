@@ -36,6 +36,12 @@ describe("AgedBrie", function() {
     brie.update();
     expect(brie.quality).toEqual(11)
   });
+
+  it("decreases the sellIn by 1", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    brie.update();
+    expect(brie.sellIn).toEqual(4)
+  });
 });
 
 describe("updateBackstagePass", function() {
@@ -69,6 +75,18 @@ describe("StandardItem", function() {
   it("Returns the quality of the StandardItem", function() {
     const standarditem = new StandardItem('sword', 5, 10)
     expect(standarditem.quality).toEqual(10)
+  });
+
+  it("Decreases the quality by 1", function() {
+    const standarditem = new StandardItem('sword', 5, 10)
+    standarditem.update();
+    expect(standarditem.quality).toEqual(9)
+  });
+
+  it("decreases the sellIn by 1", function() {
+    const standarditem = new StandardItem('sword', 5, 10)
+    standarditem.update();
+    expect(standarditem.sellIn).toEqual(4)
   });
 });
 
