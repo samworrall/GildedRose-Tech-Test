@@ -17,8 +17,13 @@ describe("Item", function() {
 
 describe("AgedBrie", function() {
   it("Returns the name of the AgedBrie", function() {
-    const brie = new AgedBrie('AgedBrie', 5, 5)
+    const brie = new AgedBrie('AgedBrie', 5, 10)
     expect(brie.name).toEqual('AgedBrie')
+  });
+
+  it("Returns the sellIn of the Aged Brie", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    expect(brie.sellIn).toEqual(5)
   });
 });
 
