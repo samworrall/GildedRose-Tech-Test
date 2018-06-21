@@ -138,6 +138,23 @@ describe("StandardItem", function() {
   });
 });
 
+describe("LegendaryItem", function() {
+  it("Returns the name of the LegendaryItem", function() {
+    const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
+    expect(legendaryitem.name).toEqual('Sulfuras, Hand of Ragnaros')
+  });
+
+  it("Returns the sellIn of the LegendaryItem", function() {
+    const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
+    expect(legendaryitem.sellIn).toEqual(5)
+  });
+
+  it("Returns the quality of the LegendaryItem", function() {
+    const legendaryitem = new LegendaryItem('Sulfuras, Hand of Ragnaros', 5, 10)
+    expect(legendaryitem.quality).toEqual(10)
+  });
+})
+
 describe("Gilded Rose", function() {
 
   describe("#updateAgedBrie", function() {
