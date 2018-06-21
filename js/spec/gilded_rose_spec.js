@@ -30,6 +30,12 @@ describe("AgedBrie", function() {
     const brie = new AgedBrie('AgedBrie', 5, 10)
     expect(brie.quality).toEqual(10)
   });
+
+  it("Increases the quality by 1", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    brie.update();
+    expect(brie.quality).toEqual(11)
+  });
 });
 
 describe("updateBackstagePass", function() {
