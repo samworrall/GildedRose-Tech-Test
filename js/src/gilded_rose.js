@@ -18,6 +18,12 @@ class BackstagePass extends Item {
   }
 }
 
+class StandardItem extends Item {
+  constructor(name, sellIn, quality) {
+    super(name, sellIn, quality);
+  }
+}
+
 class Shop {
   constructor(items=[]){
     this.items = items;

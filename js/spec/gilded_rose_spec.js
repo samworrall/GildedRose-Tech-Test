@@ -39,13 +39,30 @@ describe("updateBackstagePass", function() {
   });
 
   it("Returns the sellIn of the Aged Brie", function() {
-    const brie = new AgedBrie('AgedBrie', 5, 10)
-    expect(brie.sellIn).toEqual(5)
+    const backstagepass = new BackstagePass('BackstagePass', 5, 10)
+    expect(backstagepass.sellIn).toEqual(5)
   });
 
   it("Returns the quality of the Aged Brie", function() {
-    const brie = new AgedBrie('AgedBrie', 5, 10)
-    expect(brie.quality).toEqual(10)
+    const backstagepass = new BackstagePass('BackstagePass', 5, 10)
+    expect(backstagepass.quality).toEqual(10)
+  });
+});
+
+describe("StandardItem", function() {
+  it("Returns the name of the StandardItem", function() {
+    const standarditem = new StandardItem('sword', 5, 10)
+    expect(standarditem.name).toEqual('sword')
+  });
+
+  it("Returns the sellIn of the StandardItem", function() {
+    const standarditem = new StandardItem('sword', 5, 10)
+    expect(standarditem.sellIn).toEqual(5)
+  });
+
+  it("Returns the quality of the StandardItem", function() {
+    const standarditem = new StandardItem('sword', 5, 10)
+    expect(standarditem.quality).toEqual(10)
   });
 });
 
