@@ -25,6 +25,11 @@ describe("AgedBrie", function() {
     const brie = new AgedBrie('AgedBrie', 5, 10)
     expect(brie.sellIn).toEqual(5)
   });
+
+  it("Returns the quality of the Aged Brie", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    expect(brie.quality).toEqual(10)
+  });
 });
 
 describe("Gilded Rose", function() {
