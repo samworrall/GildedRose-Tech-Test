@@ -115,7 +115,7 @@ items: Array(5)
 
 shop.updateQuality();
 ```
-(5) [Item, Item, Item, Item, Item]
+(5) [StandardItem, AgedBrie, LegendaryItem, BackstagePass, StandardItem]
 0: StandardItem {name: "sword", sellIn: 4, quality: 4}
 1: AgedBrie {name: "Aged Brie", sellIn: 4, quality: 6}
 2: LegendaryItem {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
