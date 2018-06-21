@@ -32,6 +32,23 @@ describe("AgedBrie", function() {
   });
 });
 
+describe("updateBackstagePass", function() {
+  it("Returns the name of the BackstagePass", function() {
+    const backstagepass = new BackstagePass('BackstagePass', 5, 10)
+    expect(backstagepass.name).toEqual('BackstagePass')
+  });
+
+  it("Returns the sellIn of the Aged Brie", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    expect(brie.sellIn).toEqual(5)
+  });
+
+  it("Returns the quality of the Aged Brie", function() {
+    const brie = new AgedBrie('AgedBrie', 5, 10)
+    expect(brie.quality).toEqual(10)
+  });
+});
+
 describe("Gilded Rose", function() {
 
   describe("#updateAgedBrie", function() {

@@ -10,8 +10,12 @@ class AgedBrie extends Item {
   constructor(name, sellIn, quality) {
     super(name, sellIn, quality);
   }
+}
 
-
+class BackstagePass extends Item {
+  constructor(name, sellIn, quality) {
+    super(name, sellIn, quality);
+  }
 }
 
 class Shop {
