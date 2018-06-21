@@ -1,4 +1,21 @@
+// agedBrie = jasmine.createSpyObj('agedBrie', ['update'])
+//
+// describe("Test with agedBrie spy", function() {
+//   it('Has the update method called on it', function() {
+//     const gildedRose = new Shop([agedBrie])
+//     console.log(gildedRose.items[0])
+//     gildedRose.updateQuality();
+//     expect(agedBrie.update).toHaveBeenCalled()
+//   });
+// });
+
 describe("Gilded Rose", function() {
+
+  it("Returns an array of all Items in a shop", function() {
+    const sword = new StandardItem("sword", 5, 5)
+    const gildedRose = new Shop([sword]);
+    expect(gildedRose.items).toEqual([sword])
+  });
 
   describe("#updateQuality", function() {
 
