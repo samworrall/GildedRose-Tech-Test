@@ -3,6 +3,11 @@ describe("Item", function() {
     const item = new Item("sword", 5, 5)
     expect(item.name).toEqual("sword")
   });
+
+  it("Returns the sellIn of the item", function() {
+    const item = new Item("sword", 5, 5)
+    expect(item.sellIn).toEqual(5)
+  });
 });
 
 describe("Gilded Rose", function() {
