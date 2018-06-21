@@ -9,10 +9,6 @@ class StandardItem extends Item {
     this.calculate_update();
   }
 
-  is_a_conjured_item() {
-    return this.name.includes('Conjured')
-  }
-
   define_multiplier() {
     this.multiplier = 1
     switch(this.is_a_conjured_item()) {
@@ -20,6 +16,10 @@ class StandardItem extends Item {
         this.multiplier = 2
         break;
     }
+  }
+
+  is_a_conjured_item() {
+    return this.name.includes('Conjured')
   }
 
   calculate_update() {

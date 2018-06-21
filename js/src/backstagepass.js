@@ -11,18 +11,22 @@ class BackstagePass extends Item {
       case false:
         switch(this.quality < 50) {
           case true:
-            this.quality += 1
+            increase_quality();
             switch(this.sellIn <= 10 && this.quality < 50) {
               case true:
-                this.quality += 1
+                increase_quality();
                 switch(this.sellIn <= 5 && this.quality < 50) {
                   case true:
-                    this.quality += 1
+                    increase_quality();
                     break;
                 }
             }
         }
     }
     this.sellIn -= 1
+  }
+
+  increase_quality() {
+    this.quality += 1
   }
 }
