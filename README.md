@@ -69,6 +69,11 @@ After this refactoring, the implementation of the new conditions for 'conjured i
 
 If I were to improve upon this current iteration, I would like to implement a code coverage tester such as Istanbul so that I can be sure I am testing everything that is necessary. In terms of the source code, I would like to refactor further, perhaps extracting the update classes into a different file so that one file is not responsible for holding all the code.
 
+Update 21/06/2018:
+
+I have now created classes for all types of items, which extend the Item class. This allowed me to leave the Item class alone, but give all individual items their own separate update methods to achieve polymorphism. Due to this, the shop update method now simply iterates over the items, and calls update on each one, and each item is in charge of its own update business logic.
+
+I have also separated each class into its own file to avoid confusion and one long file called gildedrose.js. It is now easier to change something as a dev can know exactly where to look.
 
 
 ## Instructions
