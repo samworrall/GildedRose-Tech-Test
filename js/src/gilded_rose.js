@@ -4,9 +4,9 @@ class Shop {
   }
 
   updateQuality() {
-    for (var i = 0; i < this.items.length; i++) {
-      this.items[i].update();
-    }
+    this.items.forEach(function(item) {
+      item.update();
+    })
     return this.items
   }
 }
