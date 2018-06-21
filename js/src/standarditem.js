@@ -5,13 +5,21 @@ class StandardItem extends Item {
 
   update() {
     var multiplier = 1
-    if (this.name.includes('Conjured')) {
-      multiplier = 2
+    switch(this.name.includes('Conjured')) {
+      case true:
+        var multiplier = 2
+        break;
     }
-    if (this.sellIn <= 0 && this.quality > 1) {
-      this.quality -= 2 * multiplier
-    } else if (this.quality > 0) {
-      this.quality -= 1 * multiplier
+    switch(this.sellIn <= 0 && this.quality > 1) {
+      case true:
+        this.quality -= 2 * multiplier
+        break;
+      case false:
+        switch(this.quality > 0) {
+          case true:
+            this.quality -= 1 * multiplier
+            break;
+        }
     }
     this.sellIn -= 1
   }

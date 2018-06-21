@@ -4,16 +4,24 @@ class BackstagePass extends Item {
   }
 
   update() {
-    if (this.sellIn <= 0) {
-      this.quality = 0
-    } else if (this.quality < 50) {
-      this.quality += 1
-      if (this.sellIn <= 10 && this.quality < 50) {
-        this.quality += 1
-        if (this.sellIn <= 5 && this.quality < 50) {
-          this.quality += 1
+    switch(this.sellIn <= 0) {
+      case true:
+        this.quality = 0
+        break;
+      case false:
+        switch(this.quality < 50) {
+          case true:
+            this.quality += 1
+            switch(this.sellIn <= 10 && this.quality < 50) {
+              case true:
+                this.quality += 1
+                switch(this.sellIn <= 5 && this.quality < 50) {
+                  case true:
+                    this.quality += 1
+                    break;
+                }
+            }
         }
-      }
     }
     this.sellIn -= 1
   }
