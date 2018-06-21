@@ -1,3 +1,10 @@
+describe("Item", function() {
+  it("Returns the name of the item", function() {
+    const item = new Item("sword", 5, 5)
+    expect(item.name).toEqual("sword")
+  });
+});
+
 describe("Gilded Rose", function() {
 
   describe("#updateAgedBrie", function() {
