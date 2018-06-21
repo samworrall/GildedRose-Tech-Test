@@ -97,27 +97,28 @@ command + option + j
 
 
 shop = new Shop(
-  [new Item("sword", 5, 5),
-   new Item("Aged Brie", 5, 5),
-   new Item("Sulfuras, Hand of Ragnaros", 5, 5),
-   new Item("Backstage passes to a TAFKAL80ETC concert", 20, 5), new Item("Conjured sword", 10, 10)]
+  [new StandardItem("sword", 5, 5),
+   new AgedBrie("Aged Brie", 5, 5),
+   new LegendaryItem("Sulfuras, Hand of Ragnaros", 5, 5),
+   new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 5),
+   new StandardItem("Conjured sword", 10, 10)]
    )
 ```
 Shop {items: Array(5)}
 items: Array(5)
-0: Item {name: "sword", sellIn: 5, quality: 5}
-1: Item {name: "Aged Brie", sellIn: 5, quality: 5}
-2: Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
-3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 5}
-4: Item {name: "Conjured sword", sellIn: 10, quality: 10}
+0: StandardItem {name: "sword", sellIn: 5, quality: 5}
+1: AgedBrie {name: "Aged Brie", sellIn: 5, quality: 5}
+2: LegendaryItem {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
+3: BackstagePass {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 20, quality: 5}
+4: StandardItem {name: "Conjured sword", sellIn: 10, quality: 10}
 ```
 
 shop.updateQuality();
 ```
 (5) [Item, Item, Item, Item, Item]
-0: Item {name: "sword", sellIn: 4, quality: 4}
-1: Item {name: "Aged Brie", sellIn: 4, quality: 6}
-2: Item {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
-3: Item {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
-4: Item {name: "Conjured sword", sellIn: 9, quality: 8}
+0: StandardItem {name: "sword", sellIn: 4, quality: 4}
+1: AgedBrie {name: "Aged Brie", sellIn: 4, quality: 6}
+2: LegendaryItem {name: "Sulfuras, Hand of Ragnaros", sellIn: 5, quality: 5}
+3: BackstagePass {name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 19, quality: 6}
+4: StandardItem {name: "Conjured sword", sellIn: 9, quality: 8}
 ```
