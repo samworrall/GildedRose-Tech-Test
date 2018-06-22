@@ -43,4 +43,12 @@ describe("BackstagePass", function() {
     backstagepass.update();
     expect(backstagepass.sellIn).toEqual(4)
   });
+
+  describe("#increase_quality", function() {
+    it("Increases quality by 1", function() {
+      const backstagepass = new BackstagePass('BackstagePass', 5, 10)
+      backstagepass.increase_quality();
+      expect(backstagepass.quality).toEqual(11)
+    });
+  });
 });
