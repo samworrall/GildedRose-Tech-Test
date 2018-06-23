@@ -1,8 +1,8 @@
 # GildedRose Tech Test
 
-This is the GildedRose tech test for week 10 of Makers Academy. The task is to inherit some fairly ugly legacy code which maps the depreciation of items in an Inn. The legacy code begins with no testing.
+This is the GildedRose tech test for week 10 of Makers Academy. The task was to inherit some legacy code that failed to follow the basic priniciples of OOP. The code mapped the depreciation of items in an Inn. The legacy code began with no testing.
 
-The aim is to refactor the existing legacy code to a point where a new 'conjured item' with different behaviour could be added to the system with ease, and without disrupting the rest of the code.
+The aim was to refactor the existing legacy code to a point where a new 'conjured item' with different behaviour could be added to the system with ease, and without disrupting the rest of the code.
 
 
 ## Brief
