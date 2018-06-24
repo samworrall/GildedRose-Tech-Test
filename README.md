@@ -73,7 +73,7 @@ Update 21/06/2018:
 
 I have now created classes for all types of items, which extend the Item class. This allowed me to leave the Item class alone, but give all individual items their own separate update methods to achieve polymorphism. Due to this, the shop update method now simply iterates over the items, and calls update on each one, and each item is in charge of its own update business logic.
 
-I have also separated each class into its own file to avoid confusion and one long file called gildedrose.js. It is now easier to change something as a dev can know exactly where to look. Each class has its own respective spec file, and I have collated the original tests into a feature spec file.
+I have also separated each class into its own file to avoid confusion and one long file called gildedrose.js. It is now easier to change something as a dev can know exactly where to look. Each class has its own respective spec file, and I have collated the original tests into a feature spec file. I have alse extracted much of the conditional logic into smaller and more managable methods.
 
 
 ## Instructions
